@@ -22,6 +22,9 @@ class quickSortTest(unittest.TestCase):
         expect = []
         x= main.Sort([]).QUICKSORT()
         self.assertEqual(expect, x)
+    def test_error(self):
+        with self.assertRaises(TypeError):
+            x = main.Sort([1, 2, "c"]).QUICKSORT()
 
 if __name__ == '__main__':
     unittest.main()
